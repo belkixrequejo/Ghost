@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/global.css"}}"/>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Montserrat&display=swap" rel="stylesheet">
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+</head>
+
+<body class="{{body_class}}">
+
+<div class="site-wrapper">
+
+    {{{body}}}
+    {{ghost_foot}}
+    {{#if pagination.pages}}
+        <script src="{{asset "js/infinitescroll.min.js"}}"></script>
+    {{/if}}
+
+</body>
+</html>
